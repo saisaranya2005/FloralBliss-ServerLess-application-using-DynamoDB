@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floral Bliss</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            background: rgb(225, 204, 213);
+            background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgb(220, 232, 114) 100%);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px;
+            background-color: #8BC34A;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+        }
+
+        h2 {
+            color: #4CAF50;
+            text-align: center;
+        }
+
+        form {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            max-width: 400px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 30px;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .gallery {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        
+        .gallery {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 400px;
+            height: 400px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer {
+            width: 100%;
+            background-color: #8BC34A;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+    
+<header>
+    <h1>Floral Bliss - A World of Plants</h1>
+</header>
+
+    <h2>Add Plant</h2>
+
+    <form id="productForm">
+        <label for="plantID">Plant ID:</label>
+        <input type="text" id="plantID" required>
+
+        <label for="plantName">Plant Name:</label>
+        <input type="text" id="plantName" required>
+
+        <label for="cost">Cost:</label>
+        <input type="number" id="cost" required>
+
+        <button type="button" onclick="addPlant()">Add Plant</button>
+    </form>
+
+    <h2>Plant List</h2>
+
+    <table id="plantTable">
+        <thead>
+            <tr>
+                <th>Plant ID</th>
+                <th>Plant Name</th>
+                <th>Cost</th>
+                <th>Created At</th>
+            </tr>
+        </thead>
+        <tbody id="plantTableBody"></tbody>
+    </table>
+
+    <h2>Our Collections</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1515865404355-ddb5b0910878?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Flower 1">
+        <img src="https://plus.unsplash.com/premium_photo-1674986175088-2d7dda41f7f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGZsb3dlcnN8ZW58MHx8MHx8fDA%3D" alt="Flower 2">
+        <img src="https://media.istockphoto.com/id/907604326/photo/asian-water-lily-lotus-in-kerala.webp?a=1&b=1&s=612x612&w=0&k=20&c=Vl63zCA0gGVnRcTaFvOC1ekUJRAsb16kCrPiDtbh8mw=" alt="Flower 3">
+        <img src="https://images.unsplash.com/photo-1569164100738-bb7bc2b45ff1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGluayUyMGZsb3dlcnN8ZW58MHx8MHx8fDA%3D" alt="Flower 4">
+        <img src="https://images.unsplash.com/photo-1497276236755-0f85ba99a126?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHBpbmslMjBmbG93ZXJzfGVufDB8fDB8fHww" alt="Flower 5">
+        <img src="https://images.unsplash.com/photo-1461342249744-29a57e9bd1cb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHBpbmslMjBmbG93ZXJzfGVufDB8fDB8fHww" alt="Flower 6">
+        <img src="https://images.unsplash.com/photo-1613299894423-6a24c60a99e4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJsb3Nzb218ZW58MHx8MHx8fDA%3D" alt="Flower 7">
+        <img src="https://cherryvalleyorganics.com/cdn/shop/products/delicatemixsummer.jpg?v=1660650969" alt="Flower 8">
+        <img src="https://images.unsplash.com/photo-1613299894423-6a24c60a99e4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJsb3Nzb218ZW58MHx8MHx8fDA%3D" alt="Flower 9">
+        <img src="https://www.lifeisagarden.co.za/wp-content/uploads/2016/05/OOS8652.jpg" alt="Flower 10">
+        <img src="https://m.media-amazon.com/images/I/51fMbGvbgdL._AC_UF1000,1000_QL80_.jpg" alt="Flower 11">
+        <img src="https://m.media-amazon.com/images/I/81yRSh1GJcL._AC_UF1000,1000_QL80_.jpg" alt="Flower 12">
+    </div>
+    
+<div class="footer">
+    <p>&copy; 2024 Floral Bliss. All Rights Reserved.</p>
+</div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetchPlants();
+        });
+
+        function addPlant() {
+            var plantID = document.getElementById('plantID').value;
+            var plantName = document.getElementById('plantName').value;
+            var cost = document.getElementById('cost').value;
+
+            var data = {
+                operation: 'addPlant',
+                plantID: plantID,
+                plantName: plantName,
+                cost: cost
+            };
+
+            fetch('https://ytu5zfhuqe.execute-api.eu-north-1.amazonaws.com/22BAI1471/getData', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(result => {
+                alert(JSON.parse(result.body).message || 'Plant added successfully');
+                // Clear form fields
+                document.getElementById('plantID').value = '';
+                document.getElementById('plantName').value = '';
+                document.getElementById('cost').value = '';
+                fetchPlants(); // Refresh the plant list after adding a new one
+            })
+            .catch(error => {
+                console.error('Error adding plant:', error);
+            });
+        }
+
+        function fetchPlants() {
+            var requestData = {
+                operation: 'listPlant'
+            };
+
+            fetch('https://ytu5zfhuqe.execute-api.eu-north-1.amazonaws.com/22BAI1471/getData', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(requestData),
+            })
+            .then(response => response.json())
+            .then(responseData => {
+                const plants = JSON.parse(responseData.body);
+                // Clear the current table content
+                const tableBody = document.getElementById('plantTableBody');
+                tableBody.innerHTML = ''; // Clear existing rows
+                
+                // Update plant table with the fetched data
+                plants.forEach(plant => {
+                    updatePlantTable(plant);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching plants:', error);
+            });
+        }
+
+        function updatePlantTable(plant) {
+            var tableBody = document.getElementById('plantTableBody');
+            var row = tableBody.insertRow();
+
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+
+            cell1.textContent = plant.PlantID; // Ensure this matches the attribute names returned by your API
+            cell2.textContent = plant.plantName; // Ensure this matches the attribute names returned by your API
+            cell3.textContent = plant.cost; // Ensure this matches the attribute names returned by your API
+            cell4.textContent = plant.createdAt; // Ensure this matches the attribute names returned by your API
+        }
+    </script>
+
+</body>
+</html>
